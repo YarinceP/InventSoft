@@ -1,4 +1,44 @@
 <?php
+
+$usuario="root";
+$clave="";
+
+function conexion($usuario,$clave){
+
+  try {
+    //Instanciamos la clase PDO que recibe como parametro
+    $db = new PDO("mysql:host=127.0.0.1;dbname=inventsoft",$usuario,$clave);
+    return $db;
+  } catch (PDOException $e) {
+    echo "Error: ".$e;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 class Conexion
 {
     private static $instancia;
@@ -47,4 +87,5 @@ class Conexion
         trigger_error('La clonación de este objeto no está permitida', E_USER_ERROR);
 
     }
-}
+}*/
+?>
